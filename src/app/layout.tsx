@@ -1,6 +1,6 @@
 import { type Metadata } from 'next'
 
-import { Providers } from '@/app/providers'
+import { ThemeProvider } from "@/app/providers"
 import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'
@@ -27,12 +27,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      <body className="flex h-full bg-zinc-50 dark:bg-black">
-        <Providers>
+      <body className="flex h-full bg-zinc-50 dark:bg-background">
+        <ThemeProvider attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange>
           <div className="flex w-full">
             <Layout>{children}</Layout>
           </div>
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   )
