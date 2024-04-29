@@ -27,6 +27,8 @@ import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import portraitImage2 from '@/images/Nielson_Christopher2.jpg'
 import { GraduationCap, School, SchoolIcon } from 'lucide-react'
+import { AlertDialogHeader, AlertDialogFooter } from '@/components/ui/alert-dialog'
+import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel, AlertDialogAction } from '@/components/ui/alert-dialog'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -136,9 +138,24 @@ function Newsletter() {
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
         />
-        <Button type="submit" className="ml-4 flex-none">
-          Join
-        </Button>
+        <div className='pl-2'>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button >Join</Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>You are Signed Up!</AlertDialogTitle>
+                <AlertDialogDescription>
+                  Thank you for signing up for my newsletter. You will receive an email confirmation shortly.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Exit</AlertDialogCancel>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        </div>
       </div>
     </form>
   )
@@ -253,7 +270,7 @@ function Education() {
         dateTime: new Date().getFullYear().toString(),
       },
     },
- 
+
 
   ]
 
@@ -306,9 +323,9 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
-        
+
         <div className="max-w-2xl">
-          
+
           <h1 className="text-4xl font-light tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
             Christopher Nielson         </h1>
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
@@ -338,7 +355,7 @@ export default async function Home() {
               rel="noopener noreferrer"
             />
           </div>
-    
+
 
         </div>
       </Container>
@@ -355,7 +372,7 @@ export default async function Home() {
             </div>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Education/>
+            <Education />
             <Resume />
 
             <Newsletter />
