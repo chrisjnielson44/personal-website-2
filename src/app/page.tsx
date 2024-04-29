@@ -15,7 +15,8 @@ import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
-import fsu from '@/images/logos/fsu.svg'
+import BNYMellon from '@/images/logos/bny.png'
+import fsu from '@/images/logos/fsu.png'
 import isofy from '@/images/logos/isofy.png'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
@@ -24,6 +25,8 @@ import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+import portraitImage2 from '@/images/Nielson_Christopher2.jpg'
+import { GraduationCap, School, SchoolIcon } from 'lucide-react'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -191,7 +194,7 @@ function Resume() {
     {
       company: 'BNY Mellon',
       title: 'Software Engineer Intern',
-      logo: logoAirbnb,
+      logo: BNYMellon,
       start: 'Jun. 2024',
       end: 'Aug. 2024',
     },
@@ -212,8 +215,8 @@ function Resume() {
       start: '2014',
       end: '2019',
     },
- 
- 
+
+
   ]
 
   return (
@@ -227,10 +230,45 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+
+      <Button href='https://chris-n.s3.us-east-2.amazonaws.com/images/Resume1-CNielson.pdf' target="_blank" rel="noopener noreferrer" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
+
+    </div>
+  )
+}
+
+function Education() {
+  let education: Array<Role> = [
+
+    {
+      company: 'Florida State University',
+      title: 'Computer Science',
+      logo: fsu,
+      start: '2021',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+ 
+
+  ]
+
+  return (
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <GraduationCap className="stroke-zinc-400 dark:stroke-zinc-500 h-6 flex-none" />
+        <span className="ml-3">Education</span>
+      </h2>
+      <ol className="mt-6 space-y-4">
+        {education.map((role, roleIndex) => (
+          <Role key={roleIndex} role={role} />
+        ))}
+      </ol>
+
     </div>
   )
 }
@@ -268,8 +306,10 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
+        
         <div className="max-w-2xl">
-        <h1 className="text-4xl font-light tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
+          
+          <h1 className="text-4xl font-light tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
             Christopher Nielson         </h1>
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
             Computer Science Student @ FSU          </h1>
@@ -277,23 +317,29 @@ export default async function Home() {
             Driven by a deep passion for financial technology and proficient in Python, Java, and C++, my career objective is to secure an internship or career opportunity where I can apply my technical skills and knowledge. With a strong commitment to professional growth, I aim to contribute to the success of an innovative organization in the fintech industry. I am a dedicated and proactive individual, constantly seeking opportunities to expand my expertise and stay at the forefront of industry trends.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
-            <SocialLink
-              href="#"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
+            <SocialLink href="https://twitter.com/chrisjnielson"
+              aria-label="Follow on X"
+              icon={XIcon}
+              target="_blank"
+              rel="noopener noreferrer"
             />
             <SocialLink
-              href="#"
+              href="https://github.com/chrisjnielson44"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
+              target="_blank"
+              rel="noopener noreferrer"
             />
             <SocialLink
-              href="#"
+              href="https://www.linkedin.com/in/christopherjnielson/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
+              target="_blank"
+              rel="noopener noreferrer"
             />
           </div>
+    
+
         </div>
       </Container>
       {/* <Photos /> */}
@@ -309,7 +355,8 @@ export default async function Home() {
             </div>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-          <Resume />
+            <Education/>
+            <Resume />
 
             <Newsletter />
           </div>

@@ -8,7 +8,8 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import { ModeToggle } from '@/app/providers'
 import { Container } from '@/components/Container'
-import avatarImage from '@/images/Nielson_Christopher.jpg'
+// import avatarImage from '@/images/Nielson_Christopher.jpg'
+import avatarImage2 from '@/images/Nielson_Christopher2.jpg'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -104,7 +105,6 @@ function MobileNavigation(
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
                 <MobileNavItem href="/projects">Projects</MobileNavItem>
-                <MobileNavItem href="/speaking">Speaking</MobileNavItem>
                 <MobileNavItem href="/resources">Resources</MobileNavItem>
               </ul>
             </nav>
@@ -137,7 +137,7 @@ function NavItem({
       >
         {children}
         {isActive && (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-primary-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-green-500/0 via-green-500/40 to-green-500/0 dark:from-primary-400/0 dark:via-green-400/40 dark:to-green-400/0" />
         )}
       </Link>
     </li>
@@ -153,7 +153,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
         <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/projects">Projects</NavItem>
         {/* <NavItem href="/speaking">Speaking</NavItem> */}
-        <NavItem href="/resources">Resources</NavItem>
+        {/* <NavItem href="/resources">Resources</NavItem> */}
       </ul>
     </nav>
   )
@@ -197,11 +197,11 @@ function Avatar({
       {...props}
     >
       <Image
-        src={avatarImage}
+        src={avatarImage2}
         alt=""
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
-          'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
+          'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 ',
           large ? 'h-16 w-16' : 'h-9 w-9',
         )}
         priority
