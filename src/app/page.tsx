@@ -7,7 +7,6 @@ import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
@@ -15,7 +14,7 @@ import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
-import BNYMellon from '@/images/logos/bny.png'
+import BNYMellon from '@/images/logos/bny_mellon_logo.jpeg'
 import fsu from '@/images/logos/fsu.png'
 import isofy from '@/images/logos/isofy.png'
 import image1 from '@/images/photos/image-1.jpg'
@@ -212,27 +211,27 @@ function Resume() {
   let resume: Array<Role> = [
     {
       company: 'BNY Mellon',
-      title: 'Software Engineer Intern',
+      title: 'Full-Stack Developer Intern',
       logo: BNYMellon,
-      start: 'Jun. 2024',
-      end: 'Aug. 2024',
-    },
-    {
-      company: 'Florida State University',
-      title: 'IT Technician Assistant',
-      logo: fsu,
-      start: '2023',
+      start: 'Jun 2024',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
+      company: 'Florida State University',
+      title: 'IT Technician Assistant',
+      logo: fsu,
+      start: '2023',
+      end: '2024'
+    },
+    {
       company: 'Isofy',
       title: 'Software Engineer Intern',
       logo: isofy,
-      start: '2014',
-      end: '2019',
+      start: '2020',
+      end: '2021',
     },
 
 
@@ -329,9 +328,14 @@ export default async function Home() {
         <div className="max-w-2xl">
 
           <h1 className="text-4xl font-light tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
-            Christopher Nielson         </h1>
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
-            Computer Science Student @ FSU          </h1>
+            Christopher Nielson         
+            </h1>
+                <h1 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
+                Full-Stack Developer Intern @ BNY &          
+          </h1>
+          <h1 className="text-3xl font-semibold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
+          Computer Science Student @ FSU 
+          </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Driven by a deep passion for financial technology and proficient in Python, Java, and C++, my career objective is to secure an internship or career opportunity where I can apply my technical skills and knowledge. With a strong commitment to professional growth, I aim to contribute to the success of an innovative organization in the fintech industry. I am a dedicated and proactive individual, constantly seeking opportunities to expand my expertise and stay at the forefront of industry trends.
           </p>
@@ -354,6 +358,13 @@ export default async function Home() {
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
               target="_blank"
+              rel="noopener noreferrer"
+            />
+            <SocialLink
+              href="mailto:cjnielson44@gmail.com"
+              aria-label="Send an email"
+              icon={MailIcon}
+              target='_blank'
               rel="noopener noreferrer"
             />
           </div>
