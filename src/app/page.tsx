@@ -330,10 +330,10 @@ export default async function Home() {
           <h1 className="text-4xl font-light tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
             Christopher Nielson         
             </h1>
-                <h1 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
+                <h1 className="mt-4 md:text-3xl font-semibold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
                 Full-Stack Developer Intern @ BNY &          
           </h1>
-          <h1 className="text-3xl font-semibold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
+          <h1 className="md:text-3xl font-semibold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
           Computer Science Student @ FSU 
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
