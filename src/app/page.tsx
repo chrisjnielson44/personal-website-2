@@ -10,10 +10,6 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
 import BNYMellon from '@/images/logos/bny_mellon_logo.jpeg'
 import fsu from '@/images/logos/fsu.png'
 import isofy from '@/images/logos/isofy.png'
@@ -24,10 +20,9 @@ import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
-import portraitImage2 from '@/images/Nielson_Christopher2.jpg'
-import { GraduationCap, School, SchoolIcon } from 'lucide-react'
+import { GraduationCap } from 'lucide-react'
 import { AlertDialogHeader, AlertDialogFooter } from '@/components/ui/alert-dialog'
-import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel, AlertDialogAction } from '@/components/ui/alert-dialog'
+import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel } from '@/components/ui/alert-dialog'
 
 
 
@@ -210,14 +205,11 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'BNY Mellon',
+      company: 'BNY',
       title: 'Full-Stack Developer Intern',
       logo: BNYMellon,
       start: 'Jun 2024',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
+      end: 'Aug 2024',
     },
     {
       company: 'Florida State University',
@@ -233,8 +225,6 @@ function Resume() {
       start: '2020',
       end: '2021',
     },
-
-
   ]
 
   return (
@@ -260,19 +250,13 @@ function Resume() {
 
 function Education() {
   let education: Array<Role> = [
-
     {
       company: 'Florida State University',
       title: 'BS, Computer Science',
       logo: fsu,
       start: '2021',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
+      end: '2024',
     },
-
-
   ]
 
   return (
@@ -293,7 +277,6 @@ function Education() {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
@@ -320,21 +303,18 @@ function Photos() {
 
 export default async function Home() {
   let articles = (await getAllArticles()).slice(0, 4)
-
   return (
     <>
       <Container className="mt-9">
-
         <div className="max-w-2xl">
-
           <h1 className="text-4xl font-light tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
-            Christopher Nielson         
+              Christopher Nielson
             </h1>
                 <h1 className="mt-4 md:text-3xl font-semibold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
                 Full-Stack Developer Intern @ BNY &          
           </h1>
           <h1 className="md:text-3xl font-semibold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
-          Computer Science Student @ FSU 
+                Computer Science Student @ FSU
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Driven by a deep passion for financial technology and proficient in Python, Java, and C++, my career objective is to secure an internship or career opportunity where I can apply my technical skills and knowledge. With a strong commitment to professional growth, I aim to contribute to the success of an innovative organization in the fintech industry. I am a dedicated and proactive individual, constantly seeking opportunities to expand my expertise and stay at the forefront of industry trends.
@@ -368,8 +348,6 @@ export default async function Home() {
               rel="noopener noreferrer"
             />
           </div>
-
-
         </div>
       </Container>
       {/* <Photos /> */}
