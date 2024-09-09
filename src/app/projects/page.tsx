@@ -6,12 +6,20 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 
 import logoPaywind from '@/images/logos/smalllogo.png'
 import logoGithub from '@/images/logos/github.png'
+import BNYMellon from '@/images/logos/bny_mellon_logo.jpeg'
 
 
 
 const projects = [
   {
-    name: 'Paywind',
+    name: 'Impact File Trade Analysis',
+    description:
+        'Developing a risk metrics analysis system for financial products like FX, interest rates, and futures, comparing QUIC and Acadia engines. The project incorporates machine learning and NLP to enhance risk data interpretation and improve financial risk assessment.',
+    link: { href: 'https://github.com/chrisjnielson44/impact-trade-file-analysis', label: 'github.com/impact-trade-file-analysis' },
+    logo: BNYMellon,
+  },
+  {
+    name: 'Paywind - RIA Tool',
     description:
       'A RIA tool that helps financial advisors manage their clients and their portfolios.',
     link: { href: 'https://paywind.io', label: 'paywind.io' },
@@ -66,7 +74,7 @@ export default function Projects() {
               <Image
                 src={project.logo}
                 alt=""
-                className="h-8 w-auto p-2"
+                className="h-4 w-auto"
                 unoptimized
               />
             </div>
