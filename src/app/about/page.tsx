@@ -6,11 +6,9 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/Nielson_Christopher.jpg'
 import portraitImage2 from '@/images/Nielson_Christopher2.jpg'
 
 function SocialLink({
@@ -79,7 +77,7 @@ export default function About() {
             I’m Christopher
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-
+            Driven by a deep passion for financial technology and proficient in Python, Java, and C++, my career objective is to secure an internship or career opportunity where I can apply my technical skills and knowledge. With a strong commitment to professional growth, I aim to contribute to the success of an innovative organization in the fintech industry. I am a dedicated and proactive individual, constantly seeking opportunities to expand my expertise and stay at the forefront of industry trends.
           </div>
         </div>
         <div className="lg:pl-20">

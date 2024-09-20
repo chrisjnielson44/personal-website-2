@@ -45,6 +45,5 @@ export default function Uses() {
       title="Software and Tools I Use"
       intro="A collection of resources I use to build software, stay productive, and learn new things."
     />
-
   )
 }

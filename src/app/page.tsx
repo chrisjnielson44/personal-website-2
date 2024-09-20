@@ -239,7 +239,7 @@ function Resume() {
         ))}
       </ol>
 
-      <Button href='https://chris-n.s3.us-east-2.amazonaws.com/images/Resume1-CNielson.pdf' target="_blank" rel="noopener noreferrer" variant="secondary" className="group mt-6 w-full">
+      <Button href='https://chris-n.s3.us-east-2.amazonaws.com/images/Christopher_Nielson_Resume.pdf' target="_blank" rel="noopener noreferrer" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -316,9 +316,9 @@ export default async function Home() {
           <h1 className="md:text-3xl font-semibold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
                 Computer Science Student @ FSU
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Driven by a deep passion for financial technology and proficient in Python, Java, and C++, my career objective is to secure an internship or career opportunity where I can apply my technical skills and knowledge. With a strong commitment to professional growth, I aim to contribute to the success of an innovative organization in the fintech industry. I am a dedicated and proactive individual, constantly seeking opportunities to expand my expertise and stay at the forefront of industry trends.
-          </p>
+          {/*<p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">*/}
+          {/*  Driven by a deep passion for financial technology and proficient in Python, Java, and C++, my career objective is to secure an internship or career opportunity where I can apply my technical skills and knowledge. With a strong commitment to professional growth, I aim to contribute to the success of an innovative organization in the fintech industry. I am a dedicated and proactive individual, constantly seeking opportunities to expand my expertise and stay at the forefront of industry trends.*/}
+          {/*</p>*/}
           <div className="mt-6 flex gap-6">
             <SocialLink href="https://twitter.com/chrisjnielson"
               aria-label="Follow on X"
