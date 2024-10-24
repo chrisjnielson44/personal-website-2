@@ -1,6 +1,6 @@
 import { type Metadata } from 'next'
-
-import { ThemeProvider } from "@/app/providers"
+import { Analytics } from '@vercel/analytics/react'
+import { ThemeProvider } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'
@@ -8,11 +8,9 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - Christopher Nielson',
-    default:
-      'Christopher Nielson',
+    default: 'Christopher Nielson',
   },
-  description:
-    '',
+  description: '',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
@@ -28,10 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="flex h-full bg-zinc-50 dark:bg-background">
-        <ThemeProvider attribute="class"
+        <Analytics />
+        <ThemeProvider
+          attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange>
+          disableTransitionOnChange
+        >
           <div className="flex w-full">
             <Layout>{children}</Layout>
           </div>
