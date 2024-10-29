@@ -4,11 +4,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  LinkedInIcon,
-  XIcon,
-} from '@/components/SocialIcons'
+import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/SocialIcons'
 import portraitImage2 from '@/images/Nielson_Christopher2.jpg'
 
 function SocialLink({
@@ -16,25 +12,25 @@ function SocialLink({
   href,
   children,
   icon: Icon,
-  target, // Add target to the props
-  rel, // Add rel to the props
+  target,
+  rel,
 }: {
   className?: string
   href: string
   icon: React.ComponentType<{ className?: string }>
   children: React.ReactNode
-  target?: string // Make target optional
-  rel?: string // Make rel optional
+  target?: string
+  rel?: string
 }) {
   return (
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        target={target} // Pass target to Link
-        rel={rel} // Pass rel to Link
+        target={target}
+        rel={rel}
         className="group flex text-sm font-medium text-zinc-800 transition hover:text-green-500 dark:text-zinc-200 dark:hover:text-green-600"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-gree-500" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-green-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -55,7 +51,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'Learn more about Christopher Nielson, a passionate Computer Science graduate with a focus on financial technology.',
 }
 
 export default function About() {
@@ -66,28 +62,84 @@ export default function About() {
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={portraitImage2}
-              alt=""
+              alt="Christopher Nielson"
               sizes="(min-width: 1024px) 32rem, 20rem"
               className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
             />
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Christopher
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            I’m Christopher Nielson
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-            Driven by a deep passion for financial technology and proficient in Python, Java, and C++, my career objective is to secure an internship or career opportunity where I can apply my technical skills and knowledge. With a strong commitment to professional growth, I aim to contribute to the success of an innovative organization in the fintech industry. I am a dedicated and proactive individual, constantly seeking opportunities to expand my expertise and stay at the forefront of industry trends.
+            <p>
+              I am a recent graduate from Florida State University, holding a
+              Bachelor of Science in Computer Science with minors in Business
+              and Mathematics. My academic journey has equipped me with a strong
+              foundation in advanced data structures, algorithms,
+              object-oriented programming, and various programming languages
+              including Python, Java, and C++.
+            </p>
+            <p>
+              Throughout my career, I have developed and contributed to several
+              impactful projects. Notably, I built a Risk Metrics Analysis
+              Platform that leverages machine learning and natural language
+              processing to enhance financial risk assessments. Additionally, my
+              work on the ML Risk API and Paywind demonstrates my ability to
+              create scalable, secure, and innovative solutions in the fintech
+              space.
+            </p>
+            <p>
+              My professional experience includes a Software Engineering
+              Internship at the Bank of New York, where I developed machine
+              learning-driven applications for risk engineering and improved
+              frontend data presentation for risk sensitivity reporting tools.
+              Prior to that, I interned at Isofy, where I honed my full-stack
+              development skills and contributed to network security management
+              solutions.
+            </p>
+            <p>
+              I possess a diverse skill set that spans multiple programming
+              languages, frameworks, and technologies, including Next.js,
+              TypeScript, Tailwind CSS, Prisma, FastAPI, Docker, Kubernetes, and
+              various database systems. My proficiency in both front-end and
+              back-end development allows me to build comprehensive and
+              efficient applications.
+            </p>
+            <p>
+              Beyond technical skills, I am actively involved in extracurricular
+              activities such as the Cryptocurrency Organization for Young
+              Professionals, Financial Management Association, Securities
+              Society, and the Association for Computing Machinery. These roles
+              have enhanced my leadership, financial acumen, and collaborative
+              abilities.
+            </p>
+            <p>
+              Fluent in Spanish, I bring strong interpersonal communication and
+              cross-cultural skills to the table. I am a Florida Bright Futures
+              Academic Scholar, recognized for my academic excellence and
+              commitment to professional growth.
+            </p>
+            <p>
+              Driven by a passion for financial technology, my career objective
+              is to secure an internship or full-time position where I can apply
+              my technical expertise and contribute to innovative solutions in
+              the fintech industry. I am dedicated, proactive, and constantly
+              seeking opportunities to expand my knowledge and stay at the
+              forefront of industry trends.
+            </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="https://twitter.com/chrisjnielson"
+            <SocialLink
+              href="https://twitter.com/chrisjnielson"
               aria-label="Follow on Twitter"
               icon={XIcon}
               target="_blank"
               rel="noopener noreferrer"
-              className='mt-4'
+              className="mt-4"
             >
               Follow on Twitter
             </SocialLink>
@@ -98,7 +150,7 @@ export default function About() {
               icon={GitHubIcon}
               target="_blank"
               rel="noopener noreferrer"
-              className='mt-4'
+              className="mt-4"
             >
               Follow on GitHub
             </SocialLink>
@@ -108,10 +160,11 @@ export default function About() {
               icon={LinkedInIcon}
               target="_blank"
               rel="noopener noreferrer"
-              className='mt-4'
+              className="mt-4"
             >
               Follow on LinkedIn
             </SocialLink>
+
             <SocialLink
               href="mailto:cjnielson44@gmail.com"
               icon={MailIcon}
