@@ -137,6 +137,19 @@ export default function Uses() {
             integration with TypeScript create a seamless development
             experience.
           </Tool>
+          <Tool title="PostgreSQL" href="https://www.postgresql.org">
+            My relational database of choice. PostgreSQL is powerful, reliable,
+            and has excellent support for complex queries and data types.
+          </Tool>
+          <Tool title="AWS S3" href="https://aws.amazon.com/s3">
+            Scalable object storage for static assets and file uploads. I use it
+            for hosting images, videos, and other media.
+          </Tool>
+          <Tool title="Vercel" href="https://vercel.com">
+            My favorite platform for deploying web applications. Vercel&apos;s
+            integration with Next.js and GitHub makes it easy to set up
+            continuous deployment.
+          </Tool>
         </ToolsSection>
 
         <ToolsSection title="Learning Resources">
