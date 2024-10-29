@@ -110,7 +110,7 @@ export default function Uses() {
             project planning and team coordination.
           </Tool>
           <Tool title="Things 3" href="https://culturedcode.com/things/">
-            My trusted task manager. Things 3's clean design and powerful
+            My trusted task manager. Things 3&apos;s clean design and powerful
             organization features help me stay on top of projects and daily
             tasks.
           </Tool>
@@ -128,9 +128,9 @@ export default function Uses() {
             applications.
           </Tool>
           <Tool title="Tailwind CSS" href="https://tailwindcss.com">
-            My preferred styling solution. Tailwind's utility-first approach
-            allows for rapid development while maintaining consistency across
-            projects.
+            My preferred styling solution. Tailwind&apos;s utility-first
+            approach allows for rapid development while maintaining consistency
+            across projects.
           </Tool>
           <Tool title="Prisma" href="https://www.prisma.io">
             Modern ORM that makes database work a joy. The type safety and
