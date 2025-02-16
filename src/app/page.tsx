@@ -206,6 +206,13 @@ function Resume() {
   let resume: Array<Role> = [
     {
       company: 'BNY',
+      title: 'Software Engineer',
+      logo: BNYMellon,
+      start: '2025',
+      end: 'Present',
+    },
+    {
+      company: 'BNY',
       title: 'Full-Stack Developer Intern',
       logo: BNYMellon,
       start: 'Jun 2024',
@@ -311,11 +318,9 @@ export default async function Home() {
               Christopher Nielson
             </h1>
                 <h1 className="mt-4 md:text-3xl font-semibold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
-                Full-Stack Developer Intern @ BNY &          
+                Software Engineer @ BNY
           </h1>
-          <h1 className="md:text-3xl font-semibold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
-                Computer Science Student @ FSU
-          </h1>
+
           {/*<p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">*/}
           {/*  Driven by a deep passion for financial technology and proficient in Python, Java, and C++, my career objective is to secure an internship or career opportunity where I can apply my technical skills and knowledge. With a strong commitment to professional growth, I aim to contribute to the success of an innovative organization in the fintech industry. I am a dedicated and proactive individual, constantly seeking opportunities to expand my expertise and stay at the forefront of industry trends.*/}
           {/*</p>*/}

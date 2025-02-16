@@ -8,7 +8,7 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import { ModeToggle } from '@/app/providers'
 import { Container } from '@/components/Container'
-import avatarImage2 from '@/images/Nielson_Christopher2.jpg'
+import avatarImage2 from '@/images/Chris-2.png'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -195,7 +195,7 @@ function Avatar({
         alt=""
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
-          'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 ',
+          'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
           large ? 'h-16 w-16' : 'h-9 w-9',
         )}
         priority
