@@ -18,8 +18,8 @@ function NavLink({
       href={href}
       className={`transition ${
         isActive
-          ? 'text-green-500 dark:text-green-400'
-          : 'hover:text-green-500 dark:hover:text-green-400'
+          ? 'text-blue-500 dark:text-blue-400'
+          : 'hover:text-blue-500 dark:hover:text-blue-400'
       }`}
     >
       {children}

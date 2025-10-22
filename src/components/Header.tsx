@@ -126,15 +126,15 @@ function NavItem({
       <Link
         href={href}
         className={clsx(
-          'relative block px-3 py-2 transition hover:text-primary dark:hover:text-primary',
+          'relative block px-3 py-2 transition hover:text-blue-500 dark:hover:text-blue-400',
           isActive
-            ? 'font-semibold text-primary dark:text-primary'
-            : 'hover:primary font-semibold dark:hover:text-primary',
+            ? 'font-semibold text-blue-500 dark:text-blue-400'
+            : 'font-semibold',
         )}
       >
         {children}
         {isActive && (
-          <span className="dark:from-primary-400/0 absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-green-500/0 via-green-500/40 to-green-500/0 dark:via-green-400/40 dark:to-green-400/0" />
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0" />
         )}
       </Link>
     </li>

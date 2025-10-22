@@ -13,6 +13,7 @@ import {
 import BNYMellon from '@/images/logos/bny_mellon_logo.jpeg'
 import fsu from '@/images/logos/fsu.png'
 import isofy from '@/images/logos/isofy.png'
+import cmu from '@/images/logos/cmu-lettermark-r.png'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -132,7 +133,7 @@ function Newsletter() {
           placeholder="Email address"
           aria-label="Email address"
           required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-green-500 focus:outline-none focus:ring-4 focus:ring-green-500/10 sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-green-400 dark:focus:ring-green-400/10"
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/10"
         />
         <div className='pl-2'>
           <AlertDialog>
@@ -163,6 +164,7 @@ interface Role {
   logo: ImageProps['src']
   start: string | { label: string; dateTime: string }
   end: string | { label: string; dateTime: string }
+  logoStyle?: 'contain' | 'cover'
 }
 
 function Role({ role }: { role: Role }) {
@@ -176,8 +178,19 @@ function Role({ role }: { role: Role }) {
 
   return (
     <li className="flex gap-4">
-      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7 rounded-xl " unoptimized />
+      <div className={clsx(
+        "relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:ring-0",
+        role.logoStyle === 'contain' ? 'bg-white dark:bg-white' : 'dark:bg-zinc-800'
+      )}>
+        <Image
+          src={role.logo}
+          alt=""
+          className={clsx(
+            "rounded-xl",
+            role.logoStyle === 'contain' ? 'h-5 w-5 object-contain p-0.5' : 'h-7 w-7'
+          )}
+          unoptimized
+        />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -208,29 +221,8 @@ function Resume() {
       company: 'BNY',
       title: 'Software Engineer',
       logo: BNYMellon,
-      start: '2025',
-      end: 'Present',
-    },
-    {
-      company: 'BNY',
-      title: 'Full-Stack Developer Intern',
-      logo: BNYMellon,
       start: 'Jun 2024',
-      end: 'Aug 2024',
-    },
-    {
-      company: 'Florida State University',
-      title: 'IT Technician Assistant',
-      logo: fsu,
-      start: '2023',
-      end: '2024'
-    },
-    {
-      company: 'Isofy',
-      title: 'Software Engineer Intern',
-      logo: isofy,
-      start: '2020',
-      end: '2021',
+      end: 'Present',
     },
   ]
 
@@ -257,6 +249,14 @@ function Resume() {
 
 function Education() {
   let education: Array<Role> = [
+    {
+      company: 'Carnegie Mellon University',
+      title: 'Graduate Certificate',
+      logo: cmu,
+      start: '2025',
+      end: 'Present',
+      logoStyle: 'contain',
+    },
     {
       company: 'Florida State University',
       title: 'BS, Computer Science',
